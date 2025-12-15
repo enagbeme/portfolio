@@ -1,65 +1,83 @@
-import Image from "next/image";
-
 export default function Home() {
+  const fullName = "Enoch Kumanyenu";
+  const title = "Software Engineer / AI & Backend Developer";
+  const location = "Richmond, VA";
+  const whoAmI =
+    "I am a passionate software engineer originally from Ghana, now living in Richmond, VA. " +
+    "I started programming five years ago and specialize in Java, JavaScript, Python, Spring Boot, and AI development. " +
+    "I love building personal projects like a Smart Inventory Management System, a Weight Loss Mentor AI, an Expense Tracker Mobile App, " +
+    "and a Criminal Facial Recognition System. I enjoy solving real-world problems through software and mentoring others in programming and AI concepts. " +
+    "Outside of coding, I enjoy playing soccer and photography, which help me stay creative and motivated.";
+
+  const education = [
+    "Virginia Commonwealth University - Master of Science in Computer Science (Aug 2024- Dec 2025) Richmond, VA",
+    "Valley View University - Bachelor of Science in Computer Science (Sep 2018- Aug 2022) Accra, Ghana",
+  ];
+
+  const skills = [
+    "Programming Languages: Java, Python, JavaScript, SQL/PL, Bash",
+    "Frameworks & Concepts: Spring Boot, REST APIs, Object-Oriented Programming, Data Structures",
+    "Databases: MySQL, PostgreSQL, Oracle, MongoDB",
+    "Tools: Git, Docker, Linux, JIRA",
+  ];
+
+  const workExperience = [
+    "Programming Tutor Assistant - Project STEM- New York, USA (Mar 2025-Present)<br/>" +
+      "Guided 30+ students with Java and Python assignments, improving project completion rates by 20%.<br/>" +
+      "Maintained and enhanced an automated grading system, reducing grading time by 30% and improving accuracy for 50+ submissions weekly.",
+    "Junior Software Engineer - EFT Corporation- Accra, Ghana (Aug 2022- Aug 2023)<br/>" +
+      "Designed and optimized MySQL-backed REST APIs using Spring Boot, reducing transaction latency by 40%.<br/>" +
+      "Collaborated on integrating Oracle database procedures into backend services, ensuring high availability and data consistency.",
+    "IT Support Associate - Valley View University ITS- Accra, Ghana (Jan 2022- Mar 2022)<br/>" +
+      "Supported database backups and restored critical records during maintenance operations.<br/>" +
+      "Facilitated the team’s efforts in configuring a NAS box, optimizing data-sharing and increasing collaboration efficiency by 30% for over 50 users at the university.",
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content">
+            <h1>{fullName}</h1>
+            <p className="lead">{title}</p>
+            <p className="location">{location}</p>
+            <a href="/projects" className="btn bg-primary text-white">
+              View My Work
+            </a>
+            <a href="/contact" className="btn bg-secondary text-white">
+              Get in Touch
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="about" className="about-me">
+        <div className="container">
+          <h2 className="text-dark">Who I Am</h2>
+          <p>{whoAmI}</p>
+
+          <h2 className="text-dark">Education</h2>
+          <ul className="education-list">
+            {education.map((edu, idx) => (
+              <li key={idx}>{edu}</li>
+            ))}
+          </ul>
+
+          <h2 className="text-dark">Skills</h2>
+          <ul className="skills-list">
+            {skills.map((skill, idx) => (
+              <li key={idx}>{skill}</li>
+            ))}
+          </ul>
+
+          <h2 className="text-dark">Work Experience</h2>
+          <ul className="work-experience-list">
+            {workExperience.map((exp, idx) => (
+              <li key={idx} dangerouslySetInnerHTML={{ __html: exp }} />
+            ))}
+          </ul>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
