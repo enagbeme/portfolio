@@ -1,6 +1,6 @@
-# Enoch's Personal Portfolio
+# Personal Portfolio
 
-This repository contains Enoch's personal portfolio website, showcasing his skills, education, work experience, and projects. The website is built using Next.js with TypeScript, providing a modern and performant user experience.
+This repository contains my personal portfolio website, showcasing his skills, education, work experience, and projects. The website is built using Next.js with TypeScript, providing a modern and performant user experience.
 
 ## Technologies Used:
 - **Next.js:** A React framework for building fast, scalable, and SEO-friendly web applications.
