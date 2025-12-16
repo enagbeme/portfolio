@@ -1,21 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      const header = document.querySelector("header");
-      if (!header) return;
-      if (window.scrollY > 50) header.classList.add("scrolled");
-      else header.classList.remove("scrolled");
-    };
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    if (mobileOpen) {
+      document.body.classList.add("mobile-menu-open");
+    } else {
+      document.body.classList.remove("mobile-menu-open");
+    }
+  }, [mobileOpen]);
 
   return (
     <header>
@@ -26,20 +22,20 @@ export default function Header() {
           </Link>
           <button
             className="hamburger-btn"
-            onClick={() => setMobileOpen((v) => !v)}
+            onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
           >
             <i className="fas fa-bars" />
           </button>
           <ul className={`nav-links ${mobileOpen ? "active" : ""}`}>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <Link href="/projects" onClick={() => setMobileOpen(false)}>Projects</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
             </li>
           </ul>
         </nav>

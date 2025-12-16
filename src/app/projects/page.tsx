@@ -7,22 +7,25 @@ export default function ProjectsPage() {
       <div className="project-list">
         {projects.map((project) => (
           <div key={project.title} className="project-item">
+            {project.image && (
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+            )}
             <h3 className="text-primary">{project.title}</h3>
             <p>{project.description}</p>
             <p>
               <strong>Technologies:</strong> <span>{project.technologiesUsed}</span>
             </p>
             <div className="project-links">
-              {project.githubLink && project.githubLink !== "#" && (
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-sm bg-dark text-white"
-                >
-                  GitHub
-                </a>
-              )}
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-sm bg-dark text-white"
+              >
+                GitHub
+              </a>
               {project.demoLink && project.demoLink !== "#" && (
                 <a
                   href={project.demoLink}

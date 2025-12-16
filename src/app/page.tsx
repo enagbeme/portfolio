@@ -5,9 +5,14 @@ export default function Home() {
   const whoAmI =
     "I am a passionate software engineer originally from Ghana, now living in Richmond, VA. " +
     "I started programming five years ago and specialize in Java, JavaScript, Python, Spring Boot, and AI development. " +
-    "I love building personal projects like a Smart Inventory Management System, a Weight Loss Mentor AI, an Expense Tracker Mobile App, " +
-    "and a Criminal Facial Recognition System. I enjoy solving real-world problems through software and mentoring others in programming and AI concepts. " +
-    "Outside of coding, I enjoy playing soccer and photography, which help me stay creative and motivated.";
+    "I have worked on personal projects like a Smart Inventory Management System, a Weight Loss Mentor AI, an Expense Tracker Mobile App, " +
+    "a Criminal Facial Recognition System and others. I enjoy solving real-world problems through software and mentoring others in programming and AI concepts. " +
+    "Today, my focus is on designing reliable backend services, crafting clean APIs, and using Java,Python and Javascrpit to deliver fast, accessible experiences on the web. " +
+    "I care deeply about code quality, testing, performance, and deploying with confidence using Docker and CI/CD. " +
+    "I’m also exploring practical AI—building assistants and tools that enhance developer productivity and learning. " +
+    "Outside of coding, I enjoy playing soccer and photography, which help me stay creative and motivated. " +
+    "I also mentor fellow developers, volunteer at local tech events, and spend time reading about distributed systems, " +
+    "product design, and AI ethics—anything that helps me build thoughtful, user-centered software.";
 
   const education = [
     "Virginia Commonwealth University - Master of Science in Computer Science (Aug 2024- Dec 2025) Richmond, VA",
@@ -22,15 +27,36 @@ export default function Home() {
   ];
 
   const workExperience = [
-    "Programming Tutor Assistant - Project STEM- New York, USA (Mar 2025-Present)<br/>" +
-      "Guided 30+ students with Java and Python assignments, improving project completion rates by 20%.<br/>" +
-      "Maintained and enhanced an automated grading system, reducing grading time by 30% and improving accuracy for 50+ submissions weekly.",
-    "Junior Software Engineer - EFT Corporation- Accra, Ghana (Aug 2022- Aug 2023)<br/>" +
-      "Designed and optimized MySQL-backed REST APIs using Spring Boot, reducing transaction latency by 40%.<br/>" +
-      "Collaborated on integrating Oracle database procedures into backend services, ensuring high availability and data consistency.",
-    "IT Support Associate - Valley View University ITS- Accra, Ghana (Jan 2022- Mar 2022)<br/>" +
-      "Supported database backups and restored critical records during maintenance operations.<br/>" +
-      "Facilitated the team’s efforts in configuring a NAS box, optimizing data-sharing and increasing collaboration efficiency by 30% for over 50 users at the university.",
+    {
+      role: "Programming Tutor Assistant",
+      company: "Project STEM",
+      location: "New York, USA",
+      period: "Mar 2025 – Present",
+      bullets: [
+        "Guided 30+ students in Java and Python, improving completion rates by 20%",
+        "Maintained and enhanced automated grading system, reducing grading time by 30% for 50+ weekly submissions",
+      ],
+    },
+    {
+      role: "Junior Software Engineer",
+      company: "EFT Corporation",
+      location: "Accra, Ghana",
+      period: "Aug 2022 – Aug 2023",
+      bullets: [
+        "Designed and optimized MySQL-backed REST APIs with Spring Boot, reducing transaction latency by 40%",
+        "Integrated Oracle procedures into backend services, ensuring high availability and data consistency",
+      ],
+    },
+    {
+      role: "IT Support Associate",
+      company: "Valley View University ITS",
+      location: "Accra, Ghana",
+      period: "Jan 2022 – Mar 2022",
+      bullets: [
+        "Supported database backups and restored critical records during maintenance operations",
+        "Configured a NAS box to optimize data sharing, increasing collaboration efficiency by 30% for 50+ users",
+      ],
+    },
   ];
 
   return (
@@ -73,7 +99,19 @@ export default function Home() {
           <h2 className="text-dark">Work Experience</h2>
           <ul className="work-experience-list">
             {workExperience.map((exp, idx) => (
-              <li key={idx} dangerouslySetInnerHTML={{ __html: exp }} />
+              <li key={idx} className="work-item">
+                <div className="work-header">
+                  <h3 className="work-role">{exp.role}</h3>
+                  <div className="work-meta">
+                    {exp.company} · {exp.location} · {exp.period}
+                  </div>
+                </div>
+                <ul className="work-bullets">
+                  {exp.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              </li>
             ))}
           </ul>
         </div>
