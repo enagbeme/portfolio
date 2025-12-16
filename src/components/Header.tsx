@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Header() {
       <div className="container">
         <nav className="navbar">
           <Link href="/" className="logo">
-            EE
+            <Image src="/logo.svg" alt="EE Logo" width={36} height={36} />
           </Link>
           <button
             className="hamburger-btn"
