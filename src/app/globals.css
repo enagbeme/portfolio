@@ -529,11 +529,13 @@ footer p {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    aspect-ratio: 16 / 9;
 }
 
 .project-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -746,8 +748,9 @@ footer p {
         font-size: 13px;
     }
 
-    .project-image img {
-        height: 180px;
+    .project-image,
+    .project-gallery .gallery-item {
+        aspect-ratio: 16 / 9;
     }
 
     .project-item h3 {
@@ -830,8 +833,9 @@ footer p {
         line-height: 1.4;
     }
 
-    .project-image img {
-        height: 150px;
+    .project-image,
+    .project-gallery .gallery-item {
+        aspect-ratio: 16 / 9;
     }
 
     .project-links {
@@ -912,4 +916,118 @@ footer p {
 
 .social-links a:hover {
     color: #007bff;
+}
+.project-gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+}
+
+.project-gallery .gallery-item {
+    min-width: 320px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: var(--white-color);
+    border-radius: 12px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: auto;
+    padding: 20px;
+}
+
+.modal-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.modal-content .btn {
+    margin-top: 12px;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-stage {
+    position: relative;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-btn {
+    pointer-events: auto;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.carousel-dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background: var(--primary-color);
 }

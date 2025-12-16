@@ -5,6 +5,7 @@ export type Project = {
   githubLink: string;
   demoLink: string;
   image?: string;
+  images?: string[];
 };
 
 export const projects: Project[] = [
@@ -15,6 +16,15 @@ export const projects: Project[] = [
     technologiesUsed: "Java, Spring Boot, MySQL",
     githubLink: "https://github.com/enagbeme/qm_inventory.git",
     demoLink: "#",
+    image: "/projects/qm_dashboard.png",
+    images: [
+      "/projects/qm_dashboard.png",
+      "/projects/qm_products.png",
+      "/projects/categories.png",
+      "/projects/orders.png",
+      "/projects/order_details.png",
+      "/projects/login.png",
+    ],
   },
   {
     title: "Personal Portfolio Website",
@@ -23,6 +33,15 @@ export const projects: Project[] = [
     technologiesUsed: "Next.js, TypeScript, React, CSS",
     githubLink: "https://github.com/enochkumanyenu/portfolio-website",
     demoLink: "#",
+    image: "/projects/portfolio_1.png",
+    images: [
+      "/projects/portfolio_1.png",
+      "/projects/portfolio_2.png",
+      "/projects/portfolio_3.png",
+      "/projects/portfolio_4.png",
+      "/projects/portfolio_5.png",
+      "/projects/portfolio_6.png"
+    ],
   },
   {
     title: "AI-Powered Weight Loss Journey Planner",
@@ -31,6 +50,15 @@ export const projects: Project[] = [
     technologiesUsed: "Python, Streamlit, LangGraph, OpenAI GPT-4o",
     githubLink: "https://github.com/enagbeme/weight_loss_journey.git",
     demoLink: "#",
+    image: "/projects/weight_loss_AI.png",
+    images: [
+      "/projects/weight_loss_AI.png",
+      "/projects/weight_loss_AI.png_2.png",
+      "/projects/weight_loss_AI.png_3.png",
+      "/projects/weight_loss_AI.png_4.png",
+      "/projects/weight_loss_AI.png_5.png",
+      "/projects/weight_loss_AI.png_6.png"
+    ],
   },
   {
     title: "Modern Java Swing Ludo Game",
@@ -39,6 +67,11 @@ export const projects: Project[] = [
     technologiesUsed: "Java, Swing, OOP",
     githubLink: "https://github.com/enagbeme/java_ludo_game.git",
     demoLink: "#",
+    image: "/projects/ludo_game.png",
+    images: [
+      "/projects/ludo_game.png",
+      "/projects/ludo_game_2.png"
+    ],
   },
   {
     title: "Round Robin CPU Scheduling Visualizer",
@@ -47,6 +80,8 @@ export const projects: Project[] = [
     technologiesUsed: "Java, Swing, Algorithms",
     githubLink: "https://github.com/enagbeme/round_robin_algorithm.git",
     demoLink: "#",
+    image: "/projects/round_robin.png",
+    images: ["/projects/round_robin.png"],
   },
   {
     title: "Stack ADT Implementation with GUI",
@@ -55,6 +90,12 @@ export const projects: Project[] = [
     technologiesUsed: "Java, Swing, Data Structures",
     githubLink: "https://github.com/enagbeme/stackADT.git",
     demoLink: "#",
+    image: "/projects/stack_1.png",
+    images: [
+      "/projects/stack_1.png",
+      "/projects/stack_2.png",
+      "/projects/stack_3.png"
+    ],
   },
   {
     title: "Expense Tracker Mobile App",
@@ -63,6 +104,8 @@ export const projects: Project[] = [
     technologiesUsed: "Java (Android), SQLite",
     githubLink: "https://github.com/enagbeme/expense_tracker.git",
     demoLink: "#",
+    image: "/projects/expense.svg",
+    images: ["/projects/expense.svg"],
   },
   {
     title: "Criminal Facial Recognition System",
@@ -71,6 +114,8 @@ export const projects: Project[] = [
     technologiesUsed: "Python, Java, OpenCV, MySQL",
     githubLink: "#",
     demoLink: "#",
+    image: "/projects/facial.svg",
+    images: ["/projects/facial.svg"],
   }
 ];
 
