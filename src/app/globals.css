@@ -1028,6 +1028,65 @@ footer p {
     cursor: pointer;
 }
 
-.carousel-dots .dot.active {
+.modal-dots .dot.active {
     background: var(--primary-color);
+}
+
+/* Resume Page */
+.resume {
+    background: var(--white-color);
+    color: var(--dark-color);
+}
+.resume .resume-header h1 {
+    margin-bottom: 4px;
+}
+.resume .resume-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.resume h2 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.resume h3 {
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+.resume ul {
+    margin: 0 0 8px 18px;
+}
+.resume a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.resume a:hover {
+    text-decoration: underline;
+}
+
+/* Print styles for PDF */
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+    header, footer, .scroll-to-top-btn {
+        display: none !important;
+    }
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0.5in !important;
+    }
+    .resume .resume-actions {
+        display: none !important;
+    }
+    .resume a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+    h1, h2, h3 {
+        color: #000 !important;
+    }
 }

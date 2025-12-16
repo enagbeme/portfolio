@@ -73,8 +73,8 @@ export default function Home() {
             <a href="/contact" className="btn bg-secondary text-white">
               Get in Touch
             </a>
-            <a href="/resume_enoch_kumanyenu.txt" className="btn bg-dark text-white" download>
-              Download Resume
+            <a href="/resume" className="btn bg-dark text-white">
+              View Resume
             </a>
           </div>
         </div>
