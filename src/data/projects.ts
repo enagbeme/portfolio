@@ -12,8 +12,8 @@ export const projects: Project[] = [
   {
     title: "Smart Inventory Management System",
     description:
-      "Developed and deployed RESTful APIs with Spring Boot and microservices architecture, improving transaction efficiency by 40% and ensuring secure financial data handling.",
-    technologiesUsed: "Java, Spring Boot, MySQL",
+      "Inventory management app for products, categories, suppliers, and orders—includes stock logs/adjustments, role-based auth, dashboards, PDF/CSV reports, and QR code labels.",
+    technologiesUsed: "Java 17, Spring Boot, Spring MVC, Spring Security, Spring Data JPA (Hibernate), MySQL, Thymeleaf, Maven",
     githubLink: "https://github.com/enagbeme/qm_inventory.git",
     demoLink: "#",
     image: "/projects/qm_dashboard.png",
