@@ -61,6 +61,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "TRYB Clothing",
+    description:
+      "Spring Boot 3 application for an African streetwear brand, featuring product browsing, checkout, address management, and order history. Uses Thymeleaf for views, Spring Data JPA for persistence, and supports MySQL or H2 (dev) profiles.",
+    technologiesUsed:
+      "Java 17, Spring Boot 3.5, Spring Web, Thymeleaf, Spring Data JPA, Validation, MySQL/H2",
+    githubLink: "https://github.com/enagbeme/tryb_clothing.git",
+    demoLink: "#",
+    image: "/projects/tryb.png",
+    images: [
+      "/projects/tryb.png",
+      "/projects/tryb_2.png",
+      "/projects/tryb_3.png",
+      "/projects/tryb_4.png",
+      "/projects/tryb_5.png"
+    ],
+  },
+  {
     title: "Modern Java Swing Ludo Game",
     description:
       "A modern Java Swing implementation of the classic Ludo board game with complete 4-player support, interactive dice rolling, and turn management system.",
@@ -116,6 +133,6 @@ export const projects: Project[] = [
     demoLink: "#",
     image: "/projects/facial.svg",
     images: ["/projects/facial.svg"],
-  }
+  },
 ];
 
