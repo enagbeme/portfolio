@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   const fullName = "Enoch Kumanyenu";
   const title = "Software Engineer / AI & Backend Developer";
@@ -64,6 +66,14 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
+            <Image
+              src="/profile2.jpg"
+              alt={fullName}
+              width={200}
+              height={200}
+              className="profile-pic"
+              priority
+            />
             <h1>{fullName}</h1>
             <p className="lead">{title}</p>
             <p className="location">{location}</p>
