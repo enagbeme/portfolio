@@ -67,7 +67,7 @@ export default function Home() {
         <div className="container">
           <div className="hero-content">
             <Image
-              src="/profile2.jpg"
+              src="/profile3.jpg"
               alt={fullName}
               width={200}
               height={200}
