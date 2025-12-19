@@ -5,16 +5,15 @@ export default function Home() {
   const title = "Software Engineer / AI & Backend Developer";
   const location = "Richmond, VA";
   const whoAmI =
-    "I am a passionate software engineer originally from Ghana, now living in Richmond, VA. " +
-    "I started programming five years ago and specialize in Java, JavaScript, Python, Spring Boot, and AI development. " +
-    "I have worked on personal projects like a Smart Inventory Management System, a Weight Loss Mentor AI, an Expense Tracker Mobile App, " +
-    "a Criminal Facial Recognition System and others. I enjoy solving real-world problems through software and mentoring others in programming and AI concepts. " +
-    "Today, my focus is on designing reliable backend services, crafting clean APIs, and using Java,Python and Javascrpit to deliver fast, accessible experiences on the web. " +
-    "I care deeply about code quality, testing, performance, and deploying with confidence using Docker and CI/CD. " +
-    "I’m also exploring practical AI—building assistants and tools that enhance developer productivity and learning. " +
-    "Outside of coding, I enjoy playing soccer and photography, which help me stay creative and motivated. " +
-    "I also mentor fellow developers, volunteer at local tech events, and spend time reading about distributed systems, " +
-    "product design, and AI ethics—anything that helps me build thoughtful, user-centered software.";
+    "I am a passionate software engineer originally from Ghana, now living in Richmond, VA. I started programming five years ago and specialize in Java, JavaScript, Python, Spring Boot, and AI development."+
+    " My journey into tech began with a curiosity for how things work and has evolved into a deep commitment to building solutions that are both impactful and elegant." + 
+    " Professionally, I have worked on a variety of personal projects, such as a Smart Inventory Management System that streamlines tracking with predictive analytics," +
+    " and a Weight Loss Mentor AI that provides personalized health coaching. These experiences have cemented my love for translating complex, real world problems into efficient, scalable software."+
+    " Today, my primary focus is on designing reliable, high performance backend services and crafting clean, well documented APIs. I leverage Java, Python, and JavaScript to deliver fast, secure, and" + 
+    " accessible experiences on the web. I care deeply about the entire software lifecycle emphasizing code quality, comprehensive testing, system performance, and deploying with confidence using tools like Docker and robust CI/CD pipelines." +
+    " I am also actively exploring the practical applications of AI, building intelligent assistants and developer tools that enhance productivity, automate workflows, and make technology more intuitive. I believe AI should be a practical force multiplier, empowering people rather than replacing them." +
+    " Outside of coding, I stay balanced and inspired by playing soccer, which teaches teamwork and resilience, and through photography, which trains my eye for detail and composition. These passions help me maintain creativity, focus, and motivation, both at the keyboard and beyond." +
+    " I am always eager to connect, collaborate, and contribute to meaningful projects that challenge me to grow and create positive value.";
 
   const education = [
     "Virginia Commonwealth University - Master of Science in Computer Science (Aug 2024- Dec 2025) Richmond, VA",
