@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   const fullName = "Enoch Kumanyenu";
-  const title = "Software Engineer / AI & Backend Developer";
+  const title = "Software Engineer / Developer";
   const location = "Richmond, VA";
   const whoAmI =
     "I am a passionate software engineer originally from Ghana, now living in Richmond, VA. I started programming five years ago and specialize in Java, JavaScript, Python, Spring Boot, and AI development."+
@@ -22,9 +22,9 @@ export default function Home() {
 
   const skills = [
     "Programming Languages: Java, Python, JavaScript, SQL/PL, Bash",
-    "Frameworks & Concepts: Spring Boot, REST APIs, Object-Oriented Programming, Data Structures",
+    "Frameworks & Concepts: Spring Boot, REST APIs, Object-Oriented Programming, Data Structures, Design Patterns, Microservices, Unit Testing, CI/CD",
     "Databases: MySQL, PostgreSQL, Oracle, MongoDB",
-    "Tools: Git, Docker, Linux, JIRA",
+    "Tools: Git, GitHub, Docker, Linux, JIRA, VS Code, Postman, IntelliJ IDEA, MySQL Workbench,AWS",
   ];
 
   const workExperience = [
@@ -38,6 +38,17 @@ export default function Home() {
         "Maintained and enhanced automated grading system, reducing grading time by 30% for 50+ weekly submissions",
       ],
     },
+    {
+      role: "Freelance Software Developer",
+      company: "Self-employed",
+      location: "Richmond, Virginia, USA",
+      period: "Sep 2023 – Aug 2024",
+      bullets: [
+        "Developed and maintained Java-based backend services using Spring Boot and RESTful APIs for small business and academic projects",
+        "Implemented CRUD operations, input validation, and exception handling to ensure reliable application behavior",
+      ],
+    },
+
     {
       role: "Junior Software Engineer",
       company: "EFT Corporation",

@@ -27,22 +27,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Personal Portfolio Website",
+    title: "Buzzthru BP",
     description:
-      "This repository contains my personal portfolio website, showcasing my skills, education, work experience, and projects. The website is built using Next.js with TypeScript, providing a modern and performant user experience.",
-    technologiesUsed: "Next.js, TypeScript, React, CSS",
-    githubLink: "https://github.com/enochkumanyenu/portfolio-website",
+      "Employee time tracking system (Spring Boot + Thymeleaf) for multi-location businesses. Includes PIN clock-in/out, store/location registration, admin dashboard with live open shifts, employee/location management, SSE real-time updates, and weekly/date-range reports (PDF/CSV).",
+    technologiesUsed:
+      "Java 17, Spring Boot 3.x, Spring Security, Spring Data JPA, Flyway, Thymeleaf, OpenPDF, Server-Sent Events (SSE), MySQL",
+    githubLink: "https://github.com/enagbeme/Buzzthru-BP.git",
     demoLink: "#",
-    image: "/projects/portfolio_1.png",
+    image: "/projects/buzz1.png",
     images: [
-      "/projects/portfolio_1.png",
-      "/projects/portfolio_2.png",
-      "/projects/portfolio_3.png",
-      "/projects/portfolio_4.png",
-      "/projects/portfolio_5.png",
-      "/projects/portfolio_6.png"
+      "/projects/buzz1.png",
+      "/projects/buzz2.png",
+      "/projects/buzz3.png",
+      "/projects/buzz4.png",
+      "/projects/buzz5.png",
     ],
   },
+  
   {
     title: "AI-Powered Weight Loss Journey Planner",
     description:
@@ -75,6 +76,23 @@ export const projects: Project[] = [
       "/projects/tryb_3.png",
       "/projects/tryb_4.png",
       "/projects/tryb_5.png"
+    ],
+  },
+  {
+    title: "Personal Portfolio Website",
+    description:
+      "This repository contains my personal portfolio website, showcasing my skills, education, work experience, and projects. The website is built using Next.js with TypeScript, providing a modern and performant user experience.",
+    technologiesUsed: "Next.js, TypeScript, React, CSS",
+    githubLink: "https://github.com/enochkumanyenu/portfolio-website",
+    demoLink: "#",
+    image: "/projects/portfolio_1.png",
+    images: [
+      "/projects/portfolio_1.png",
+      "/projects/portfolio_2.png",
+      "/projects/portfolio_3.png",
+      "/projects/portfolio_4.png",
+      "/projects/portfolio_5.png",
+      "/projects/portfolio_6.png"
     ],
   },
   {
