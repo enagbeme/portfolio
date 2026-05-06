@@ -3,40 +3,52 @@ import { useEffect } from "react";
 
 export default function ClientBehavior() {
   useEffect(() => {
-    const onScrollHeader = () => {
+    const onScroll = () => {
       const header = document.querySelector("header");
-      if (!header) return;
-      if (window.scrollY > 50) header.classList.add("scrolled");
-      else header.classList.remove("scrolled");
-    };
-
-    const onScrollTopBtn = () => {
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      if (!scrollToTopBtn) return;
-      if (window.scrollY > 300) scrollToTopBtn.style.display = "block";
-      else scrollToTopBtn.style.display = "none";
+
+      if (header) {
+        if (window.scrollY > 50) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      }
+
+      if (scrollToTopBtn) {
+        scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      }
     };
 
     const onClickTop = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    window.addEventListener("scroll", onScrollHeader);
-    window.addEventListener("scroll", onScrollTopBtn);
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
 
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    window.addEventListener("scroll", onScroll);
     const btn = document.getElementById("scrollToTopBtn");
     btn?.addEventListener("click", onClickTop);
 
-    onScrollHeader();
-    onScrollTopBtn();
+    onScroll();
 
     return () => {
-      window.removeEventListener("scroll", onScrollHeader);
-      window.removeEventListener("scroll", onScrollTopBtn);
+      window.removeEventListener("scroll", onScroll);
       btn?.removeEventListener("click", onClickTop);
+      observer.disconnect();
     };
   }, []);
 
   return null;
 }
-

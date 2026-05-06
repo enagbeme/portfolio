@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (mobileOpen) {
@@ -14,29 +15,48 @@ export default function Header() {
     }
   }, [mobileOpen]);
 
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <header>
       <div className="container">
         <nav className="navbar">
           <Link href="/" className="logo">
-            <Image src="/logo.svg" alt="EE Logo" width={36} height={36} />
+            <span className="logo-text">EK</span>
           </Link>
           <button
             className="hamburger-btn"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
           >
-            <i className="fas fa-bars" />
+            <i className={mobileOpen ? "fas fa-times" : "fas fa-bars"} />
           </button>
-          <ul className={`nav-links ${mobileOpen ? "active" : ""}`}>
+          <ul className="nav-links">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={pathname === item.href ? "active" : ""}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
             <li>
-              <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
-            </li>
-            <li>
-              <Link href="/projects" onClick={() => setMobileOpen(false)}>Projects</Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+              <a
+                href="https://github.com/enagbeme"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-sm btn-outline"
+                style={{ marginLeft: 8 }}
+              >
+                <i className="fab fa-github" /> GitHub
+              </a>
             </li>
           </ul>
         </nav>
@@ -44,4 +64,3 @@ export default function Header() {
     </header>
   );
 }
-

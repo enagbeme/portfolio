@@ -2,6 +2,7 @@ export type Project = {
   title: string;
   description: string;
   technologiesUsed: string;
+  category: string;
   githubLink: string;
   demoLink: string;
   image?: string;
@@ -10,10 +11,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "ARETE Women's Generation",
+    description:
+      "Official website for a faith-rooted organization empowering women to discover purpose, pursue excellence, and create transformative impact. Features responsive design, scroll animations, lightbox gallery, and animated counters.",
+    technologiesUsed: "HTML5, CSS3, JavaScript, Vercel",
+    category: "Web",
+    githubLink: "https://github.com/enagbeme/arete-women-generation",
+    demoLink: "https://aretewomengeneration.org",
+    image: "/projects/arete_placeholder.svg",
+    images: [],
+  },
+  {
+    title: "Urban Nest",
+    description:
+      "A Spring Boot web application for discovering, listing, and managing rental properties. Features server-rendered UI with Thymeleaf, property search, listing management, and Supabase-hosted PostgreSQL database.",
+    technologiesUsed:
+      "Java 17, Spring Boot, Spring Security, Spring Data JPA, Thymeleaf, Supabase (PostgreSQL)",
+    category: "Full Stack",
+    githubLink: "https://github.com/enagbeme/urban_nest",
+    demoLink: "#",
+    image: "/projects/urban_nest_placeholder.svg",
+    images: [],
+  },
+  {
     title: "Smart Inventory Management System",
     description:
-      "An inventory management system covering products, categories, suppliers, and orders, with stock logs and adjustments; role‑based authentication; dashboards; PDF/CSV reports; QR code labels; and AI‑driven demand forecasting.",
-    technologiesUsed: "Java 17, Spring Boot, Spring MVC, Spring Security, Spring Data JPA (Hibernate), MySQL, Thymeleaf, Maven",
+      "An inventory management system covering products, categories, suppliers, and orders, with stock logs and adjustments; role-based authentication; dashboards; PDF/CSV reports; QR code labels; and AI-driven demand forecasting.",
+    technologiesUsed:
+      "Java 17, Spring Boot, Spring MVC, Spring Security, Spring Data JPA (Hibernate), MySQL, Thymeleaf, Maven",
+    category: "Full Stack",
     githubLink: "https://github.com/enagbeme/qm_inventory.git",
     demoLink: "#",
     image: "/projects/qm_dashboard.png",
@@ -29,9 +55,10 @@ export const projects: Project[] = [
   {
     title: "Buzzthru BP",
     description:
-      "Employee time tracking system (Spring Boot + Thymeleaf) for multi-location businesses. Includes PIN clock-in/out, store/location registration, admin dashboard with live open shifts, employee/location management, SSE real-time updates, and weekly/date-range reports (PDF/CSV).",
+      "Employee time tracking system for multi-location businesses. Includes PIN clock-in/out, store/location registration, admin dashboard with live open shifts, employee/location management, SSE real-time updates, and weekly/date-range reports (PDF/CSV).",
     technologiesUsed:
       "Java 17, Spring Boot 3.x, Spring Security, Spring Data JPA, Flyway, Thymeleaf, OpenPDF, Server-Sent Events (SSE), MySQL",
+    category: "Full Stack",
     githubLink: "https://github.com/enagbeme/Buzzthru-BP.git",
     demoLink: "#",
     image: "/projects/buzz1.png",
@@ -43,12 +70,12 @@ export const projects: Project[] = [
       "/projects/buzz5.png",
     ],
   },
-  
   {
     title: "AI-Powered Weight Loss Journey Planner",
     description:
-      "This intelligent assistant helps you achieve your weight loss goals through AI-generated personalized daily nutrition, exercise, and habit plans, progress tracking, explainable AI, and adaptive guidance.",
+      "An intelligent assistant that helps achieve weight loss goals through AI-generated personalized daily nutrition, exercise, and habit plans, progress tracking, explainable AI, and adaptive guidance.",
     technologiesUsed: "Python, Streamlit, LangGraph, OpenAI GPT-4o",
+    category: "AI / ML",
     githubLink: "https://github.com/enagbeme/weight_loss_journey.git",
     demoLink: "#",
     image: "/projects/weight_loss_AI.png",
@@ -58,15 +85,16 @@ export const projects: Project[] = [
       "/projects/weight_loss_AI.png_3.png",
       "/projects/weight_loss_AI.png_4.png",
       "/projects/weight_loss_AI.png_5.png",
-      "/projects/weight_loss_AI.png_6.png"
+      "/projects/weight_loss_AI.png_6.png",
     ],
   },
   {
     title: "TRYB Clothing",
     description:
-      "Spring Boot 3 application for an African streetwear brand, featuring product browsing, checkout, address management, and order history. Uses Thymeleaf for views, Spring Data JPA for persistence, and supports MySQL or H2 (dev) profiles.",
+      "Spring Boot 3 e-commerce application for an African streetwear brand, featuring product browsing, checkout, address management, and order history. Uses Thymeleaf for views, Spring Data JPA for persistence.",
     technologiesUsed:
       "Java 17, Spring Boot 3.5, Spring Web, Thymeleaf, Spring Data JPA, Validation, MySQL/H2",
+    category: "Full Stack",
     githubLink: "https://github.com/enagbeme/tryb_clothing.git",
     demoLink: "#",
     image: "/projects/tryb.png",
@@ -75,14 +103,15 @@ export const projects: Project[] = [
       "/projects/tryb_2.png",
       "/projects/tryb_3.png",
       "/projects/tryb_4.png",
-      "/projects/tryb_5.png"
+      "/projects/tryb_5.png",
     ],
   },
   {
     title: "Personal Portfolio Website",
     description:
-      "This repository contains my personal portfolio website, showcasing my skills, education, work experience, and projects. The website is built using Next.js with TypeScript, providing a modern and performant user experience.",
+      "This personal portfolio website showcasing skills, education, work experience, and projects. Built with Next.js and TypeScript for a modern and performant user experience.",
     technologiesUsed: "Next.js, TypeScript, React, CSS",
+    category: "Web",
     githubLink: "https://github.com/enochkumanyenu/portfolio-website",
     demoLink: "#",
     image: "/projects/portfolio_1.png",
@@ -92,7 +121,7 @@ export const projects: Project[] = [
       "/projects/portfolio_3.png",
       "/projects/portfolio_4.png",
       "/projects/portfolio_5.png",
-      "/projects/portfolio_6.png"
+      "/projects/portfolio_6.png",
     ],
   },
   {
@@ -100,19 +129,18 @@ export const projects: Project[] = [
     description:
       "A modern Java Swing implementation of the classic Ludo board game with complete 4-player support, interactive dice rolling, and turn management system.",
     technologiesUsed: "Java, Swing, OOP",
+    category: "Desktop",
     githubLink: "https://github.com/enagbeme/java_ludo_game.git",
     demoLink: "#",
     image: "/projects/ludo_game.png",
-    images: [
-      "/projects/ludo_game.png",
-      "/projects/ludo_game_2.png"
-    ],
+    images: ["/projects/ludo_game.png", "/projects/ludo_game_2.png"],
   },
   {
     title: "Round Robin CPU Scheduling Visualizer",
     description:
       "A Java Swing application that visually demonstrates the Round Robin CPU scheduling algorithm with interactive GUI and performance metrics.",
     technologiesUsed: "Java, Swing, Algorithms",
+    category: "Desktop",
     githubLink: "https://github.com/enagbeme/round_robin_algorithm.git",
     demoLink: "#",
     image: "/projects/round_robin.png",
@@ -123,34 +151,36 @@ export const projects: Project[] = [
     description:
       "Comprehensive Java implementation of Stack Abstract Data Type with both console-based and graphical user interface visualizations.",
     technologiesUsed: "Java, Swing, Data Structures",
+    category: "Desktop",
     githubLink: "https://github.com/enagbeme/stackADT.git",
     demoLink: "#",
     image: "/projects/stack_1.png",
     images: [
       "/projects/stack_1.png",
       "/projects/stack_2.png",
-      "/projects/stack_3.png"
+      "/projects/stack_3.png",
     ],
   },
   {
     title: "Expense Tracker Mobile App",
     description:
-      "Designed an Android app with SQLite database integration for managing and visualizing expenses, improving budgeting accuracy.",
+      "An Android app with SQLite database integration for managing and visualizing expenses, improving budgeting accuracy.",
     technologiesUsed: "Java (Android), SQLite",
+    category: "Mobile",
     githubLink: "https://github.com/enagbeme/expense_tracker.git",
     demoLink: "#",
     image: "/projects/expense.svg",
     images: ["/projects/expense.svg"],
   },
   {
-    title: "Criminal Facial Recognition System",
+    title: "Facial Recognition Identity System",
     description:
-      "Built a system to identify suspects using facial data, achieving 85%+ accuracy in test cases with OpenCV.",
+      "A system to identify individuals using facial data, achieving 85%+ accuracy in test cases with OpenCV. Repo private.",
     technologiesUsed: "Python, Java, OpenCV, MySQL",
+    category: "AI / ML",
     githubLink: "#",
     demoLink: "#",
     image: "/projects/facial.svg",
     images: ["/projects/facial.svg"],
   },
 ];
-
