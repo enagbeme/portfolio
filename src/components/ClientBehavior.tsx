@@ -1,7 +1,10 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ClientBehavior() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const onScroll = () => {
       const header = document.querySelector("header");
@@ -48,7 +51,7 @@ export default function ClientBehavior() {
       btn?.removeEventListener("click", onClickTop);
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
