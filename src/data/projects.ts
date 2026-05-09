@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: "ARETE Women's Generation",
     description:
       "Official website for a faith-rooted organization empowering women to discover purpose, pursue excellence, and create transformative impact. Features responsive design, scroll animations, lightbox gallery, and animated counters.",
-    technologiesUsed: "HTML5, CSS3, JavaScript, Vercel",
+    technologiesUsed: "HTML5, CSS3, Vercel",
     category: "Web",
     githubLink: "https://github.com/enagbeme/arete-women-generation",
     demoLink: "https://aretewomengeneration.org",
@@ -109,8 +109,8 @@ export const projects: Project[] = [
   {
     title: "Personal Portfolio Website",
     description:
-      "This personal portfolio website showcasing skills, education, work experience, and projects. Built with Next.js and TypeScript for a modern and performant user experience.",
-    technologiesUsed: "Next.js, TypeScript, React, CSS",
+      "This personal portfolio website showcasing skills, education, work experience, and projects. Built with TypeScript for a modern and performant user experience.",
+    technologiesUsed: "TypeScript, CSS",
     category: "Web",
     githubLink: "https://github.com/enochkumanyenu/portfolio-website",
     demoLink: "#",

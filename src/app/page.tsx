@@ -41,7 +41,7 @@ export default function Home() {
     {
       title: "Languages",
       icon: "fas fa-code",
-      skills: ["Java", "Python", "JavaScript", "SQL", "Bash"],
+      skills: ["Java", "Python", "SQL", "Bash"],
     },
     {
       title: "Frameworks & APIs",
@@ -50,8 +50,6 @@ export default function Home() {
         "Spring Boot",
         "REST APIs",
         "Microservices",
-        "React",
-        "Next.js",
       ],
     },
     {
@@ -77,7 +75,6 @@ export default function Home() {
         "AWS (EC2, S3, Lambda)",
         "CI/CD",
         "Git",
-        "JIRA",
         "Linux",
         "Postman",
       ],
