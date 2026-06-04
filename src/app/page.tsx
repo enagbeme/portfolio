@@ -74,12 +74,13 @@ export default function Home() {
       skills: ["MySQL", "PostgreSQL", "MongoDB"],
     },
     {
-      title: "DevOps & Tools",
-      icon: "fas fa-tools",
+      title: "Cloud & DevOps",
+      icon: "fas fa-cloud",
       skills: [
+        "AWS (ECS Fargate, EC2, RDS, S3, Lambda, ALB, Route 53, IAM, VPC, CloudWatch)",
+        "Terraform (IaC)",
         "Docker",
-        "AWS (EC2, S3, Lambda)",
-        "CI/CD",
+        "GitHub Actions (CI/CD)",
         "Git",
         "Linux",
         "Postman",

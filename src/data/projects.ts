@@ -11,6 +11,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Snip — Cloud-Native URL Shortener",
+    description:
+      "A production URL shortener with click analytics, built with Java Spring Boot and deployed on AWS. Runs on ECS Fargate behind an Application Load Balancer with an RDS PostgreSQL database in a private subnet. Entire infrastructure (34 resources) defined in Terraform and deployed via a GitHub Actions CI/CD pipeline.",
+    technologiesUsed:
+      "Java 17, Spring Boot, Spring Data JPA, PostgreSQL, AWS (ECS Fargate, RDS, ALB, Route 53, CloudWatch, IAM, VPC), Terraform, Docker, GitHub Actions",
+    category: "Full Stack",
+    githubLink: "https://github.com/enagbeme/url-shortener",
+    demoLink: "https://link.enochenagbem.cloud",
+    image: "/projects/arete_placeholder.svg",
+    images: [],
+  },
+  {
     title: "ARETE Women's Generation",
     description:
       "Official website for a faith-rooted organization empowering women to discover purpose, pursue excellence, and create transformative impact. Features responsive design, scroll animations, lightbox gallery, and animated counters.",
