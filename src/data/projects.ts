@@ -19,7 +19,7 @@ export const projects: Project[] = [
     category: "Full Stack",
     githubLink: "https://github.com/enagbeme/url-shortener",
     demoLink: "https://link.enochenagbem.cloud",
-    image: "/projects/arete_placeholder.svg",
+    image: "/projects/snip.svg",
     images: [],
   },
   {
