@@ -19,8 +19,8 @@ export const projects: Project[] = [
     category: "Full Stack",
     githubLink: "https://github.com/enagbeme/url-shortener",
     demoLink: "https://link.enochenagbem.cloud",
-    image: "/projects/snip.svg",
-    images: [],
+    image: "/projects/snip.png",
+    images: ["/projects/snip.png"],
   },
   {
     title: "ARETE Women's Generation",
@@ -30,8 +30,8 @@ export const projects: Project[] = [
     category: "Web",
     githubLink: "https://github.com/enagbeme/arete-women-generation",
     demoLink: "https://aretewomengeneration.org",
-    image: "/projects/arete_placeholder.svg",
-    images: [],
+    image: "/projects/arete.png",
+    images: ["/projects/arete.png"],
   },
   {
     title: "Urban Nest",
