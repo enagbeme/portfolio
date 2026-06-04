@@ -18,12 +18,6 @@ export default function Home() {
 
   const certifications = [
     {
-      name: "Google Cybersecurity Certificate",
-      issuer: "Coursera / Google",
-      status: "Expected May 2026",
-      icon: "fab fa-google",
-    },
-    {
       name: "Introduction to Networking",
       issuer: "Cisco Networking Academy",
       status: "Completed",
@@ -184,10 +178,10 @@ export default function Home() {
                 Detail-oriented Computer Science graduate (M.S., VCU) and
                 backend developer with a strong foundation in Java and Spring
                 Boot, REST API design, and relational databases. Experienced in
-                building secure, scalable systems and deploying them with Docker
-                and CI/CD. Backed by a security mindset and actively pursuing the
-                Google Cybersecurity Certificate (May 2026). Authorized to work
-                in the US — no sponsorship required.
+                building secure, scalable systems and deploying them on AWS with
+                Docker, Terraform, and CI/CD. Backed by a security mindset and
+                Cisco Networking &amp; Cybersecurity certifications. Authorized to
+                work in the US — no sponsorship required.
               </p>
               <p>
                 My primary focus is on designing reliable, high-performance
