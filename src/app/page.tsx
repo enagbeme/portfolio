@@ -48,7 +48,13 @@ export default function Home() {
       icon: "fas fa-layer-group",
       skills: [
         "Spring Boot",
+        "Spring Data JPA",
+        "Spring Security",
+        "Hibernate",
         "REST APIs",
+        "Thymeleaf",
+        "Maven",
+        "JUnit",
         "Microservices",
       ],
     },
@@ -147,7 +153,7 @@ export default function Home() {
             <h1>
               Hi, I&apos;m <span className="gradient-text">Enoch</span>
             </h1>
-            <p className="lead">Software Engineer & Security-Focused Developer</p>
+            <p className="lead">Backend Software Engineer &middot; Java | Spring Boot | REST APIs</p>
             <p className="location">
               <i className="fas fa-map-marker-alt" /> Richmond, VA
             </p>
@@ -174,12 +180,13 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-text animate-on-scroll">
               <p>
-                Detail-oriented Computer Science graduate (M.S., VCU) with a
-                strong foundation in information security, backend development,
-                and technical documentation. Experienced in building secure,
-                scalable systems using Java, Python, and cloud infrastructure.
-                Actively pursuing Google Cybersecurity Certificate (May 2026).
-                Authorized to work in the US — no sponsorship required.
+                Detail-oriented Computer Science graduate (M.S., VCU) and
+                backend developer with a strong foundation in Java and Spring
+                Boot, REST API design, and relational databases. Experienced in
+                building secure, scalable systems and deploying them with Docker
+                and CI/CD. Backed by a security mindset and actively pursuing the
+                Google Cybersecurity Certificate (May 2026). Authorized to work
+                in the US — no sponsorship required.
               </p>
               <p>
                 My primary focus is on designing reliable, high-performance
